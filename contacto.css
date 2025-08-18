@@ -1,0 +1,136 @@
+/* Fondo y layout general */
+body {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  font-family: GodOfWar, Helvetica, sans-serif;
+  background-image: url('../imagenes/escritoriof.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header h2 {
+  font-family:  GodOfWar, Helvetica, sans-serif;
+  margin: 0px;
+  font-size: 5em;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 1px 1px 5px #000;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  padding: 0.3em;
+  background-color: rgba(0, 0, 0);
+  border-bottom: 2px solid #444;
+}
+
+header.sticky {
+  position: sticky;
+  top: 0;
+  
+}
+/*menu*/
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-right:60px;
+  margin-left: 68px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 16px 18px;
+  text-decoration: none;
+}
+
+
+/* Contenedor del formulario */
+main.contenedor-formulario {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+} 
+
+/* Caja del formulario */
+.contacto-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  border-left: 4px solid #282828;
+}
+
+.contacto-box input,
+.contacto-box textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contacto-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacto-box button:hover {
+  background-color: #666;
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  font-size: 16px;
+}
+
+footer a img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+footer p {
+  color: white;
+  margin: 10px 0;
+}
