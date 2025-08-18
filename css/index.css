@@ -1,0 +1,150 @@
+/* Estilo general */
+@font-face {
+    font-family: 'GodOfWar';
+    src: url('fonts/GODOFWAR.TTF') format('truetype');
+    /* Puedes agregar más formatos para compatibilidad */
+}
+body {
+  font-family: GodOfWar, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  background-image: url('https://tse1.explicit.bing.net/th/id/OIP.UCCnRL5u93BRdZCW-ShgAAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3'); /* Imagen de fondo opcional */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  backdrop-filter: brightness(0.6);
+}
+
+/* Encabezado */
+header {
+  background-color: rgba(0, 0, 0);
+  color:black;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+
+#titulo-juego {
+  font-family: 'Creepster', cursive;
+}
+  font-size: 5em;
+  letter-spacing: 2px;
+  color: #e00000cc;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/*menu*/
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-right:60px;
+  margin-left: 68px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-family:GodOfWar, Helvetica, sans-serif;
+}
+
+/* Secciones */
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+}
+
+/* Botones */
+button {
+  padding: 12px 25px;
+  background-color: #1f1f1f;
+  color: #295d5f;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-left: 1400px; /* Mueve el botón hacia la derecha desde el centro */
+}
+
+button:hover {
+  background-color: #295d5f;
+  color: #1f1f1f;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+/* Cuadro de pistas o diálogos */
+.clue-box, .dialog-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #e0e000;
+  font-style: italic;
+}
+
+/* Posicionamiento en la esquina superior derecha */
+.menu-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+.button {
+  background-color: #5e1055;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+    
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  background-color: rgba(0, 0, 0);
+  width:100%;
+  font-family:GodOfWar, Helvetica, sans-serif;
+  font-size: 16px;
+}
