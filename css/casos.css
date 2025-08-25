@@ -79,6 +79,7 @@ li a {
 }
 
 /* Diseño 1: Tarjetas con imagen y texto sobre un degradado */
+
 .case-card {
   position: relative;
   border-radius: 12px;
@@ -87,10 +88,10 @@ li a {
   cursor: pointer;
   transition: transform 0.3s ease;
   color: white;
-  background-color: #222;
+  background-color: #000000;
   padding: 2rem 2rem;
-  
-  }
+}
+
 
 .case-card:hover {
   transform: scale(1.05);
@@ -100,7 +101,6 @@ li a {
   width: 80%;
   height: 60%;
   object-fit: cover;
-  filter: brightness(0.6);
   border-radius: 10px;
 }
 
@@ -108,10 +108,9 @@ li a {
   position: relative;
   bottom: 0;
   padding: 1rem 1.5rem;
-  background: linear-gradient(180deg, rgba(0,0,0,0.85));
-  width: 400px;
+  background-color:black;
+  width: 450px;
   box-sizing: border-box;
-  width: 500px;
 }
 
 .case-card h2 {
@@ -130,15 +129,17 @@ li a {
   color: white;
 }
 
+
 section {
   max-width: 600px;
   margin: 10px 10px 10px 10px;
   padding: 30px;
-  background-color: rgba(20, 20, 20, 0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   border-radius: 10px;
   box-shadow: 0 0 15px #000;
   text-align: justify;
 }
+
 
 .button1{
   text-decoration: none;
