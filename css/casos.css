@@ -1,5 +1,4 @@
-@import url('imagenes/pizarron.jpg');
-   
+@import url('imagenes/pizarron.jpg'); 
 
 body {
     background-image: url('../imagenes/lupa.jpg'); 
@@ -12,7 +11,6 @@ body {
     height: 100%;
     color: white;
 }
-
 
 header h2 {
   font-family:  GodOfWar, Helvetica, sans-serif;
@@ -38,7 +36,6 @@ header.sticky {
 }
 /*menu*/
 nav ul{
-  /*position: sticky;*/
   list-style: none;
   display: flex;
   gap: 15px;
@@ -72,10 +69,70 @@ li a {
   text-decoration: none;
 }
 
+/* Contenedor principal flex para casos */
+.cases-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px;
+  padding: 2rem;
+  justify-items: center; 
+}
+
+/* Diseño 1: Tarjetas con imagen y texto sobre un degradado */
+.case-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+  background-color: #222;
+  padding: 2rem 2rem;
+  
+  }
+
+.case-card:hover {
+  transform: scale(1.05);
+}
+
+.case-card img {
+  width: 80%;
+  height: 60%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  border-radius: 10px;
+}
+
+.case-card {
+  position: relative;
+  bottom: 0;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.85));
+  width: 400px;
+  box-sizing: border-box;
+  width: 500px;
+}
+
+.case-card h2 {
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.case-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.2em;
+  color: white;
+}
+
 section {
   max-width: 600px;
-  /*margin: 40px auto;*/
-  margin: 30px 30px 30px 30px;
+  margin: 10px 10px 10px 10px;
   padding: 30px;
   background-color: rgba(20, 20, 20, 0.85);
   border-radius: 10px;
@@ -83,65 +140,39 @@ section {
   text-align: justify;
 }
 
-div.casos{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
 .button1{
+  text-decoration: none;
   text-align: justify;
   color: white;
   background-color: rgba(20, 20, 20, 0.85);
 }
 
 .button2{
+  text-decoration: none;
   text-align: justify;
   color: white;
   background-color: rgba(20, 20, 20, 0.85);
 }
 
 .button3{
+  text-decoration: none;
   text-align: justify;
   color: white;
   background-color: rgba(20, 20, 20, 0.85);
 }
 
 .button4{
+  text-decoration: none;
   text-align: justify;
   color: white;
   background-color: rgba(20, 20, 20, 0.85);
 }
 
 .button5{
+  text-decoration: none;
   text-align: justify;
   color: white;
   background-color: rgba(20, 20, 20, 0.85);
-}
-
-.caso4{ 
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.caso10{
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.caso17{
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.caso21{
-  grid-column: 2;
-  grid-row: 2; 
-}
-
-.caso28{
-  grid-column: 1;
-  grid-row: 3;
 }
 
 
@@ -153,5 +184,4 @@ footer {
   width:100%;
   font-family:GodOfWar, Helvetica, sans-serif;
 }
-
 
