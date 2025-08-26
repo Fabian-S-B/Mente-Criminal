@@ -116,3 +116,29 @@ section {
 }
 
 
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            /* En pantallas más pequeñas, apila la imagen y el texto */
+            .contenedor-principal {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .texto {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Estilos para móviles muy pequeños */
+            .contenido-principal, .personajes {
+                padding: 15px;
+            }
+
+            .galeria-imagenes img {
+                max-width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+            }
+            .botones {
+                flex-direction: column;
+            }
+        }
