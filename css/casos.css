@@ -140,35 +140,120 @@ footer {
   font-family: GodOfWar, Helvetica, sans-serif;
 }
 
-/* ——— Responsive ——— */
-@media (max-width: 900px) {
-  .cases-container {
-    grid-template-columns: 1fr;    /* 1 columna en tablet/móvil */
-    padding: 1rem;
+/* ----------- RESPONSIVIDAD ----------- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-
-  /* Ocultamos menú en móvil hasta abrir */
-  nav ul {
-    display: none;
+/* Celulares */
+@media (max-width: 600px) {
+  header {
     flex-direction: column;
-    align-items: stretch;
+    text-align: center;
   }
 
-  /* Al abrir (clase .open en <nav>) */
-  nav.open ul {
-    display: flex;
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
   }
 
   nav ul li a {
-    border-bottom: 1px solid #222;
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  section {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  button, .button {
+    width: 100%;
+    font-size: 14px;
   }
 }
 
-/* En escritorio el menú siempre visible, sin depender de JS */
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Menú en escritorio */
+#nav-menu {
+  display: block;
+}
+
+/* En móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar hamburguesa */
+  }
+
+  #nav-menu {
+    display: none; /* Oculto por defecto */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-menu ul li {
+    width: 100%;
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-bottom: 1px solid #333;
+  }
+}
+
+/* Forzar menú horizontal cuando vuelva a pantalla grande */
 @media (min-width: 769px) {
-  nav ul { display: flex !important; }
+  #nav-menu {
+    display: block !important;
+  }
+
+  #nav-menu ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #nav-menu ul li a {
+    border-bottom: none;
+  }
 }
