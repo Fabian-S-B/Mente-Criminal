@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="../css/casos.css">
     <link rel="icon" href="../imagenes/logo.png" type="image/png">
 </head>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');               // Mostramos/ocultamos con clase (sin estilos inline)
+    const isOpen = nav.classList.contains('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+    toggle.textContent = isOpen ? '✖' : '☰';    // Cambia ícono
+  });
+</script>
+
 <body>
 <header>
   <!-- Botón Hamburguesa -->
@@ -15,7 +28,7 @@
   <!-- Menú -->
   <nav id="nav-menu">
     <ul>
-      <li><a href="../html/index.html">Inicio</a></li>
+      <li><a href="../index.html"">Inicio</a></li>
       <li><a href="../html/casos.html">Casos</a></li>
       <li><a href="../html/contacto.html">Contacto</a></li>
       <li><a href="../html/quienes-somos.html">Quienes somos</a></li>
@@ -89,17 +102,8 @@
 </footer>
 
 <!-- Pega esto justo antes de </body> -->
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav-menu');
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');               // Mostramos/ocultamos con clase (sin estilos inline)
-    const isOpen = nav.classList.contains('open');
-    toggle.setAttribute('aria-expanded', isOpen);
-    toggle.textContent = isOpen ? '✖' : '☰';    // Cambia ícono
-  });
-</script>
 
 </body>
 </html>
+
+

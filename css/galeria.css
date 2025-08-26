@@ -14,7 +14,7 @@ body {
 
 /* Encabezado */
 header h2 {
-  font-family: GodOfWar, Helvetica, sans-serif;
+  font-family:  GodOfWar, Helvetica, sans-serif;
   margin: 0px;
   font-size: 5em;
   letter-spacing: 2px;
@@ -26,11 +26,12 @@ header h2 {
 header {
   text-align: center;
   padding: 0.3em;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0);
   border-bottom: 2px solid #444;
+}
+header.sticky {
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 /* Menú */
@@ -61,6 +62,11 @@ ul {
   padding: 0;
   background-color: black;
 }
+
+nav ul li a.activo {
+  border-bottom: 2px solid crimson;
+}
+
 
 /* Botón hamburguesa */
 .menu-toggle {

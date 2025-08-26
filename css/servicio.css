@@ -33,29 +33,32 @@ header.sticky {
   
 }
 /*menu*/
-nav ul{
+nav {
+  position: relative;
+}
+
+nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 15px;
   padding: 0;
   margin: 0;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  text-align: center;
-  margin-right:60px;
-  margin-left: 68px;
+  padding: 10px 20px;
 }
+
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: black;
 }
 
