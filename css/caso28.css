@@ -42,6 +42,7 @@ section {
   color: white;
 }
 
+
 .contenedor-principal {
   display: flex; /* Esto hace que los elementos hijos se alineen en una fila */
   align-items: center; /* Alinea verticalmente los elementos al centro */
@@ -86,6 +87,20 @@ section {
     left: 20px; 
 }
 
+.button2{
+  background-color: #5e1055;
+  border-radius: 10px;
+  color: white;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+}
 
 .texto {
   flex: 1;

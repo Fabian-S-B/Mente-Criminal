@@ -59,6 +59,19 @@ ul {
   background-color: black;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+}
+
 li a {
   display: block;
   color: white;
@@ -98,33 +111,34 @@ footer {
   font-size: 16px;
 }
 
-/* Menú hamburguesa */
-.menu-toggle {
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  nav ul {
     display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  section img {
+    max-width: 90%;
+    height: auto;
+  }
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
+@media (max-width: 480px) {
+  header h2 {
+    font-size: 3em;
+  }
 
-    nav ul.open {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 2rem;
-        background: none;
-        color: white;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 1100;
-    }
+  p {
+    font-size: 18px;
+  }
 }
