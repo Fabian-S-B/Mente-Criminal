@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="../css/casos.css">
     <link rel="icon" href="../imagenes/logo.png" type="image/png">
 </head>
-
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav-menu');
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');               // Mostramos/ocultamos con clase (sin estilos inline)
-    const isOpen = nav.classList.contains('open');
-    toggle.setAttribute('aria-expanded', isOpen);
-    toggle.textContent = isOpen ? '✖' : '☰';    // Cambia ícono
-  });
-</script>
-
 <body>
 <header>
   <!-- Botón Hamburguesa -->
@@ -103,7 +90,18 @@
     <p>&copy; Todos los derechos reservados, ICT2025</p>
 </footer>
 
-<!-- Pega esto justo antes de </body> -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    // Para cambiar el ícono de hamburguesa a una "X" y viceversa
+    const isOpen = nav.classList.contains('open');
+    toggle.textContent = isOpen ? '✖' : '☰';
+  });
+</script>
+
 
 </body>
 </html>
