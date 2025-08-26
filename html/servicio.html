@@ -9,6 +9,9 @@
 </head>
 <body>
     <header>
+        <!-- Botón menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
         <nav>
             <ul>
               <li><a href="../html/index.html">Inicio</a></li>
@@ -19,31 +22,39 @@
               <li><a href="../html/servicio.html">Servicios</a></li>
             </ul>
         </nav>
-    <h2>Servicios</h2>
+        <h2>Servicios</h2>
     </header>
+
     <main>
         <section>
-        <h2>Nuestro juego ofrece los servicios de entretenimiento,conocimiento,interaccion</h2>
+            <h2>Nuestro juego ofrece los servicios de entretenimiento, conocimiento e interacción</h2>
         </section>
         <section>
             <p><b>Entretenimiento:</b></p>
-            <p>aqui puedes entretenerte con los distintos escenarios que contamos, 
-            buscando las pistas para poder descubir los misterios que oculta cada uno de los casos.
-            buscando las pistas,objetos y a las personas que pueden ser los complices o los culpables de los robos</p>
+            <p>Aquí puedes entretenerte con los distintos escenarios que contamos, buscando pistas para descubrir los misterios que oculta cada caso, así como objetos y personas que pueden ser cómplices o culpables de los robos.</p>
         </section>
         <section>
-        <p><b>Conocimiento:</b></p>
-        <p>Puedes aprender a pensar como un detective para poder resolver los robos,asesinatos,secuestros,etc</p>
+            <p><b>Conocimiento:</b></p>
+            <p>Puedes aprender a pensar como un detective para resolver robos, asesinatos, secuestros, etc.</p>
         </section>
         <section>
-            <p><b>interaccion:</b></p>
-            <p>Puedes interactuar con los objetos, personas y distintos escenarios que tiene cada caso para 
-            asi pooder completar los desafios y asi lograr resolver los casos con exito</p>
+            <p><b>Interacción:</b></p>
+            <p>Puedes interactuar con objetos, personas y distintos escenarios de cada caso para completar desafíos y resolver los casos con éxito.</p>
         </section>
     </main>
 
     <footer>
-        <P>&COPY; Todos los derechos Reservdos. ICT2025</P>
+        <p>&copy; Todos los derechos reservados, ICT2025</p>
     </footer>
+
+    <!-- Script para menú hamburguesa -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUL = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navUL.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

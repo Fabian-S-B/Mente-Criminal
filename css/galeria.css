@@ -1,4 +1,5 @@
-body{   
+/* Estilo general */
+body {   
   font-family: GodOfWar, Helvetica, sans-serif;
   margin: 0;
   background-color: #0d0d0d;
@@ -11,8 +12,9 @@ body{
   backdrop-filter: brightness(0.6);
 }
 
+/* Encabezado */
 header h2 {
-  font-family:  GodOfWar, Helvetica, sans-serif;
+  font-family: GodOfWar, Helvetica, sans-serif;
   margin: 0px;
   font-size: 5em;
   letter-spacing: 2px;
@@ -24,85 +26,121 @@ header h2 {
 header {
   text-align: center;
   padding: 0.3em;
-  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   border-bottom: 2px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/*menu*/
-nav ul{
+/* Menú */
+nav {
+  position: relative;
+}
+
+nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 15px;
   padding: 0;
   margin: 0;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  text-align: center;
-  margin-right:60px;
-  margin-left: 68px;
+  padding: 10px 20px;
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: black;
 }
 
-li a {
-  display: block;
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
   color: white;
-  text-align: right;
-  padding: 16px 18px;
-  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
 }
 
+/* Secciones */
 section {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 20px;
   background-color: rgba(20, 20, 20, 0.85);
   border-radius: 10px;
   box-shadow: 0 0 15px #000;
-}
-
-p {
-  font-size: 24px;
   text-align: center;
 }
 
-
-.caso04 img{
-  width: 350px;
+/* Texto general */
+p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.caso10 img{
-  width: 350px;
+/* Imágenes de galería */
+section img {
+  width: 100%;
+  max-width: 350px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.7);
 }
 
-.caso17 img{
-  width: 350px;
-}
-
-.caso21 img{
-  width: 350px;
-}
-
-.caso28 img{
-  width: 350px;
-}
-
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  font-size: 0.9em;
-  background-color: rgba(0, 0, 0);
-  width:100%;
-  font-family:GodOfWar, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  font-family: GodOfWar, Helvetica, sans-serif;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  section img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header h2 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }

@@ -1,188 +1,174 @@
-@import url('imagenes/pizarron.jpg'); 
-
+/* ——— Fondo y tipografía ——— */
 body {
-    background-image: url('../imagenes/lupa.jpg'); 
-    font-family: GodOfWar, Helvetica, sans-serif;
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-}
-
-header h2 {
-  font-family:  GodOfWar, Helvetica, sans-serif;
-  margin: 0px;
-  font-size: 5em;
-  letter-spacing: 2px;
+  background-image: url('../imagenes/lupa.jpg');
+  font-family: GodOfWar, Helvetica, sans-serif;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
   color: white;
-  text-shadow: 1px 1px 5px #000;
-  text-align: center;
 }
 
+/* ——— Header ——— */
 header {
   text-align: center;
   padding: 0.3em;
-  background-color: rgba(0, 0, 0);
+  background-color: rgba(0,0,0,1);
   border-bottom: 2px solid #444;
-}
-
-header.sticky {
   position: sticky;
   top: 0;
-  
+  z-index: 100;
 }
-/*menu*/
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
+
+header h2 {
+  margin: 0.3em 0 0;
+  font-size: clamp(1.8rem, 4vw, 5em); /* escala fluida */
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* ——— Botón hamburguesa ——— */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  font-size: 2rem;
+  background: none;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ——— Menú ——— */
+nav {
   width: 100%;
 }
 
-nav ul li a{
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 18px;
   text-decoration: none;
   color: white;
   font-weight: bold;
   text-align: center;
-  margin-right:60px;
-  margin-left: 68px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: right;
-  padding: 16px 18px;
-  text-decoration: none;
-}
-
-/* Contenedor principal flex para casos */
+/* ——— Layout tarjetas (grid) ——— */
 .cases-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   gap: 20px;
   padding: 2rem;
-  justify-items: center; 
+  justify-items: center;
 }
 
-/* Diseño 1: Tarjetas con imagen y texto sobre un degradado */
-
+/* ——— Tarjetas ——— */
 .case-card {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-  cursor: pointer;
   transition: transform 0.3s ease;
   color: white;
-  background-color: #000000;
-  padding: 2rem 2rem;
-}
-
-
-.case-card:hover {
-  transform: scale(1.05);
-}
-
-.case-card img {
-  width: 80%;
-  height: 60%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.case-card {
-  position: relative;
-  bottom: 0;
-  padding: 1rem 1.5rem;
-  background-color:black;
-  width: 450px;
+  background-color: #000;
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 500px;             /* <— evita ancho fijo que rompía en móvil */
   box-sizing: border-box;
+  text-align: center;           /* elimina <center> del HTML si quieres */
+}
+
+.case-card:hover { transform: scale(1.03); }
+
+/* ——— Imágenes responsivas reales ——— */
+.case-card img {
+  width: 100%;                  /* <— ocupa todo el ancho de la tarjeta */
+  height: auto;                 /* <— conserva proporción */
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;         /* altura consistente; quítalo si no lo quieres */
+}
+
+.case-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .case-card h2 {
-  margin: 0 0 0.3rem 0;
+  margin: 0.75rem 0 0.25rem;
   font-weight: 700;
   font-family: 'Merriweather', serif;
-  font-size: 1.2rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
   color: white;
 }
 
 .case-card p {
   margin: 0;
-  font-size: 0.9rem;
-  font-style: italic;
-  line-height: 1.2em;
+  font-size: 0.95rem;
+  line-height: 1.35;
   color: white;
 }
 
-
-section {
-  max-width: 600px;
-  margin: 10px 10px 10px 10px;
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 10px;
-  box-shadow: 0 0 15px #000;
-  text-align: justify;
-}
-
-
-.button1{
+/* Botones de enlace (si los usas) */
+.button1, .button2, .button3, .button4, .button5 {
   text-decoration: none;
-  text-align: justify;
   color: white;
   background-color: rgba(20, 20, 20, 0.85);
 }
 
-.button2{
-  text-decoration: none;
-  text-align: justify;
-  color: white;
-  background-color: rgba(20, 20, 20, 0.85);
-}
-
-.button3{
-  text-decoration: none;
-  text-align: justify;
-  color: white;
-  background-color: rgba(20, 20, 20, 0.85);
-}
-
-.button4{
-  text-decoration: none;
-  text-align: justify;
-  color: white;
-  background-color: rgba(20, 20, 20, 0.85);
-}
-
-.button5{
-  text-decoration: none;
-  text-align: justify;
-  color: white;
-  background-color: rgba(20, 20, 20, 0.85);
-}
-
-
+/* ——— Footer ——— */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background-color: rgba(0, 0, 0);
-  width:100%;
-  font-family:GodOfWar, Helvetica, sans-serif;
+  background-color: rgba(0,0,0,1);
+  width: 100%;
+  font-family: GodOfWar, Helvetica, sans-serif;
 }
 
+/* ——— Responsive ——— */
+@media (max-width: 900px) {
+  .cases-container {
+    grid-template-columns: 1fr;    /* 1 columna en tablet/móvil */
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  /* Ocultamos menú en móvil hasta abrir */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Al abrir (clase .open en <nav>) */
+  nav.open ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    border-bottom: 1px solid #222;
+  }
+}
+
+/* En escritorio el menú siempre visible, sin depender de JS */
+@media (min-width: 769px) {
+  nav ul { display: flex !important; }
+}

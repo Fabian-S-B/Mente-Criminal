@@ -97,3 +97,34 @@ footer {
   font-family:GodOfWar, Helvetica, sans-serif;
   font-size: 16px;
 }
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1100;
+    }
+}
