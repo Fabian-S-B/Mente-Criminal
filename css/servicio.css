@@ -14,7 +14,7 @@ body{
 header h2 {
   font-family:  GodOfWar, Helvetica, sans-serif;
   margin: 0px;
-  font-size: 5em;
+  font-size: 2em;
   letter-spacing: 2px;
   color: white;
   text-shadow: 1px 1px 5px #000;
@@ -138,7 +138,7 @@ footer {
 
 @media (max-width: 480px) {
   header h2 {
-    font-size: 3em;
+    font-size: 32px;
   }
 
   p {

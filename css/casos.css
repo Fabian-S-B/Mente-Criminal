@@ -10,18 +10,21 @@ body {
 
 /* ——— Header ——— */
 header {
-  text-align: center;
-  padding: 0.3em;
-  background-color: rgba(0,0,0,1);
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.95);
   border-bottom: 2px solid #444;
   position: sticky;
   top: 0;
   z-index: 100;
+  /* Cambios para el diseño de Flexbox */
+  display: flex;
+  justify-content: center; /* Centra el título en escritorio */
+  align-items: center;
 }
 
 header h2 {
-  margin: 0.3em 0 0;
-  font-size: clamp(1.8rem, 4vw, 5em); /* escala fluida */
+  margin: 0px;
+  font-size: clamp(2rem, 5vw, 5em);
   letter-spacing: 2px;
   color: white;
   text-shadow: 1px 1px 5px #000;
@@ -30,15 +33,12 @@ header h2 {
 /* ——— Botón hamburguesa ——— */
 .menu-toggle {
   display: none;
-  position: absolute;
-  left: 12px;
-  top: 10px;
   font-size: 2rem;
   background: none;
-  border: 0;
   color: white;
+  border: none;
   cursor: pointer;
-  line-height: 1;
+  z-index: 1100;
 }
 
 /* ——— Menú ——— */
@@ -65,6 +65,10 @@ nav ul li a {
   text-align: center;
 }
 
+nav ul li a.activo {
+  border-bottom: 2px solid crimson;
+}
+
 /* ——— Layout tarjetas (grid) ——— */
 .cases-container {
   display: grid;
@@ -79,27 +83,29 @@ nav ul li a {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease;
   color: white;
   background-color: #000;
   padding: 1.25rem;
   width: 100%;
-  max-width: 500px;             /* <— evita ancho fijo que rompía en móvil */
+  max-width: 500px;
   box-sizing: border-box;
-  text-align: center;           /* elimina <center> del HTML si quieres */
+  text-align: center;
 }
 
-.case-card:hover { transform: scale(1.03); }
+.case-card:hover {
+  transform: scale(1.03);
+}
 
 /* ——— Imágenes responsivas reales ——— */
 .case-card img {
-  width: 100%;                  /* <— ocupa todo el ancho de la tarjeta */
-  height: auto;                 /* <— conserva proporción */
+  width: 100%;
+  height: auto;
   display: block;
   border-radius: 10px;
   object-fit: cover;
-  aspect-ratio: 16 / 9;         /* altura consistente; quítalo si no lo quieres */
+  aspect-ratio: 16 / 9;
 }
 
 .case-card a {
@@ -135,94 +141,43 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0, 0, 0, 1);
   width: 100%;
   font-family: GodOfWar, Helvetica, sans-serif;
 }
 
 /* ----------- RESPONSIVIDAD ----------- */
 
-/* Tablets y pantallas medianas */
-@media (max-width: 992px) {
-  header h1 {
-    font-size: 2.5em;
-    text-align: center;
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  section {
-    margin: 20px;
-    padding: 20px;
-  }
-}
-
-/* Celulares */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    font-size: 14px;
-  }
-
-  section {
-    margin: 15px;
-    padding: 15px;
-  }
-
-  button, .button {
-    width: 100%;
-    font-size: 14px;
-  }
-}
-
-/* Botón hamburguesa oculto en escritorio */
-.menu-toggle {
-  display: none;
-  font-size: 2em;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Menú en escritorio */
-#nav-menu {
-  display: block;
-}
-
 /* En móviles */
 @media (max-width: 768px) {
+  header {
+    justify-content: space-between; /* Alinea los elementos en los extremos */
+    padding: 0.5em 1.5em; /* Añade más espacio a los lados */
+  }
+
+  header h2 {
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+
   .menu-toggle {
-    display: block; /* Mostrar hamburguesa */
+    display: block; /* Muestra el botón de hamburguesa */
   }
 
   #nav-menu {
-    display: none; /* Oculto por defecto */
+    display: none; /* Por defecto, el menú está oculto */
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
+  }
+
+  #nav-menu.open {
+    display: block;
+    transform: translateX(0);
   }
 
   #nav-menu ul {
@@ -242,10 +197,12 @@ footer {
   }
 }
 
-/* Forzar menú horizontal cuando vuelva a pantalla grande */
+/* Forzar menú horizontal en escritorio */
 @media (min-width: 769px) {
   #nav-menu {
     display: block !important;
+    transform: none !important;
+    position: static;
   }
 
   #nav-menu ul {
