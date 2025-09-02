@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="../css/servicio.css">
+    <link rel="icon" href="../imagenes/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <!-- Botón menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+        <nav>
+            <ul>
+              <li><a href="../index.html"">Inicio</a></li>
+              <li><a href="../html/casos.html">Casos</a></li>
+              <li><a href="../html/contacto.html">Contacto</a></li>
+              <li><a href="../html/quienes-somos.html">Quienes somos</a></li>
+              <li><a href="../html/galeria.html">Galeria</a></li>
+              <li><a href="../html/servicio.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <h2>Servicios</h2>
+    </header>
+
+    <main>
+        <section>
+            <h2>Nuestro juego ofrece los servicios de entretenimiento, conocimiento e interacción</h2>
+        </section>
+        <section>
+            <p><b>Entretenimiento:</b></p>
+            <p>Aquí puedes entretenerte con los distintos escenarios que contamos, buscando pistas para descubrir los misterios que oculta cada caso, así como objetos y personas que pueden ser cómplices o culpables de los robos.</p>
+        </section>
+        <section>
+            <p><b>Conocimiento:</b></p>
+            <p>Puedes aprender a pensar como un detective para resolver robos, asesinatos, secuestros, etc.</p>
+        </section>
+        <section>
+            <p><b>Interacción:</b></p>
+            <p>Puedes interactuar con objetos, personas y distintos escenarios de cada caso para completar desafíos y resolver los casos con éxito.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Todos los derechos reservados, ICT2025</p>
+    </footer>
+
+    <!-- Script para menú hamburguesa -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUL = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navUL.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

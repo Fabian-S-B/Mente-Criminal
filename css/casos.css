@@ -1,0 +1,216 @@
+/* ——— Fondo y tipografía ——— */
+body {
+  background-image: url('../imagenes/lupa.jpg');
+  font-family: GodOfWar, Helvetica, sans-serif;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  color: white;
+}
+
+/* ——— Header ——— */
+header {
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 2px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Cambios para el diseño de Flexbox */
+  display: flex;
+  justify-content: center; /* Centra el título en escritorio */
+  align-items: center;
+}
+
+header h2 {
+  margin: 0px;
+  font-size: clamp(2rem, 5vw, 5em);
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* ——— Botón hamburguesa ——— */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* ——— Menú ——— */
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav ul li a.activo {
+  border-bottom: 2px solid crimson;
+}
+
+/* ——— Layout tarjetas (grid) ——— */
+.cases-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* ——— Tarjetas ——— */
+.case-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+  color: white;
+  background-color: #000;
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.case-card:hover {
+  transform: scale(1.03);
+}
+
+/* ——— Imágenes responsivas reales ——— */
+.case-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.case-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.case-card h2 {
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: white;
+}
+
+.case-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: white;
+}
+
+/* Botones de enlace (si los usas) */
+.button1, .button2, .button3, .button4, .button5 {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(20, 20, 20, 0.85);
+}
+
+/* ——— Footer ——— */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  font-family: GodOfWar, Helvetica, sans-serif;
+}
+
+/* ----------- RESPONSIVIDAD ----------- */
+
+/* En móviles */
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between; /* Alinea los elementos en los extremos */
+    padding: 0.5em 1.5em; /* Añade más espacio a los lados */
+  }
+
+  header h2 {
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el botón de hamburguesa */
+  }
+
+  #nav-menu {
+    display: none; /* Por defecto, el menú está oculto */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
+  }
+
+  #nav-menu.open {
+    display: block;
+    transform: translateX(0);
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-menu ul li {
+    width: 100%;
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-bottom: 1px solid #333;
+  }
+}
+
+/* Forzar menú horizontal en escritorio */
+@media (min-width: 769px) {
+  #nav-menu {
+    display: block !important;
+    transform: none !important;
+    position: static;
+  }
+
+  #nav-menu ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #nav-menu ul li a {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,144 @@
+/* Reset y estilos básicos */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: GodOfWar, Helvetica, sans-serif;
+  background-image: url('../imagenes/caso04/fondo04.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #f2f2f2;
+}
+
+
+/* Sección principal */
+.contenido-principal {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+  font-size: 18px;
+}
+
+/* Galería de imágenes */
+.galeria-imagenes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px; /* Aumenta el espacio entre las imágenes a 20 píxeles */
+}
+
+.galeria-imagenes img {
+  width: calc(25% - 15px);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+  text-align: right;
+  color: white;
+}
+
+/* Secciones de personajes */
+.contenedor-principal {
+  display: flex; /* Esto hace que los elementos hijos se alineen en una fila */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  gap: 20px; /* Agrega un espacio entre la imagen y el texto */
+  padding: 20px; /* Un poco de espacio interno para que no se pegue a los bordes */
+}
+
+
+.contenedor-principal img {
+  width: 220px; 
+  height: 220px; 
+  border-radius: 8px; 
+}
+
+
+.button {
+    background-color:#5e1055;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 18px; /* Menos padding para hacerlo más pequeño */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Mejor para un enlace botón */
+    font-size: 20px; /* Texto un poco más pequeño */
+    margin: 0; /* Sin margen extra */
+    cursor: pointer;
+    position: fixed; /* Fijado en la pantalla */
+    top: 20px;  /* Separado del borde superior */
+    left: 20px; /* Separado del borde izquierdo */
+}
+
+.button1 {
+    background-color: #5e1055;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+}
+
+.button2{
+  background-color: #5e1055;
+  border-radius: 10px;
+  color: white;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+}
+
+.texto {
+  flex: 1;
+  text-align: left;
+  font-size: 20px;
+}
+
+
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            /* En pantallas más pequeñas, apila la imagen y el texto */
+            .contenedor-principal {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .texto {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Estilos para móviles muy pequeños */
+            .contenido-principal, .personajes {
+                padding: 15px;
+            }
+
+            .galeria-imagenes img {
+                max-width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+            }
+            .botones {
+                flex-direction: column;
+            }
+        }

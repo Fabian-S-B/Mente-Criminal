@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../css/contacto.css">
+  <link rel="icon" href="../imagenes/logo.png" type="image/png">
+</head>
+<body>
+  <header>
+    <!-- Botón Hamburguesa -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <!-- Menú -->
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="../index.html"">Inicio</a></li>
+        <li><a href="../html/casos.html">Casos</a></li>
+        <li><a href="../html/contacto.html" class="activo">Contacto</a></li>
+        <li><a href="../html/quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="../html/galeria.html">Galería</a></li>
+        <li><a href="../html/servicio.html">Servicios</a></li>
+      </ul>
+    </nav>
+
+    <h2>Contacto</h2>
+  </header>
+
+  <main class="contenedor-formulario">
+    <div class="contacto-box">
+      <p>Si tienes alguna pregunta o comentario.</p>
+      <h2>Contáctanos</h2>
+      <form action="#" method="post" class="contact-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>También puedes seguirnos en nuestras redes sociales:</p>
+    <a href="https://www.instagram.com/mente_criminal0.1" target="_blank">
+      <img src="../imagenes/Instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61579189525857" target="_blank">
+      <img src="../imagenes/Facebook.jpg" alt="Facebook">
+    </a>
+    <p>&copy; Todos los derechos reservados, ICT2025</p>
+  </footer>
+
+  <!-- Script para hamburguesa -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      const isOpen = nav.classList.contains('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      toggle.textContent = isOpen ? '✖' : '☰';
+    });
+  </script>
+
+  <script src="../scripts/alertas.js"></script>
+</body>
+</html>

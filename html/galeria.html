@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <link rel="stylesheet" href="../css/galeria.css">
+    <link rel="icon" href="../imagenes/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../html/casos.html">Casos</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+      <li><a href="../html/quienes-somos.html">Quienes somos</a></li>
+      <li><a href="../html/galeria.html">Galeria</a></li>
+      <li><a href="../html/servicio.html">Servicios</a></li>
+    </ul>
+  </nav>
+  <h2>Galeria</h2>
+</header>
+
+
+    <p>Aquí podrán observar imágenes de nuestro juego y sus escenarios</p>
+
+    <section class="caso04">
+        <h2>Caso N°04</h2>
+        <img src="../imagenes/caso04/cabana.jpg" alt="Cabaña">
+        <img src="../imagenes/caso04/patio.jpg" alt="Patio">
+        <img src="../imagenes/caso04/habitacion1_cabana.jpg" alt="Habitación">
+        <img src="../imagenes/caso04/sendero.jpg" alt="Sendero">
+    </section>
+
+    <section class="caso10">
+        <h2>Caso N°10</h2>
+        <img src="../imagenes/caso10/garaje.jpg" alt="Garaje">
+        <img src="../imagenes/caso10/piezadesordenada.jpg" alt="Pieza desordenada">
+        <img src="../imagenes/caso10/psicologahabitacion.jpg" alt="Habitación psicóloga">
+        <img src="../imagenes/caso10/sotano.jpg" alt="Sótano">
+    </section>
+
+    <section class="caso17">
+        <h2>Caso N°17</h2>
+        <img src="../imagenes/caso17/casa.jpg" alt="Casa">
+        <img src="../imagenes/caso17/cuadros.jpg" alt="Cuadros">
+        <img src="../imagenes/caso17/escritorio.jpg" alt="Escritorio">
+        <img src="../imagenes/caso17/saladeestar,jpg.jpg" alt="Sala de estar">
+    </section>
+
+    <section class="caso21">
+        <h2>Caso N°21</h2>
+        <img src="../imagenes/caso21/invernadero.jpg" alt="Invernadero">
+        <img src="../imagenes/caso21/habitacion_desaparecida.jpg" alt="Habitación desaparecida">
+        <img src="../imagenes/caso21/habitacion_secreta.jpg" alt="Habitación secreta">
+        <img src="../imagenes/caso21/antro_nocturno.jpg" alt="Antro nocturno">
+    </section>
+
+    <section class="caso28">
+        <h2>Caso N°28</h2>
+        <img src="../imagenes/caso28/cajafuerte.jpg" alt="Caja fuerte">
+        <img src="../imagenes/caso28/diamante.jpg" alt="Diamante">
+        <img src="../imagenes/caso28/joyas.jpg" alt="Joyas">
+        <img src="../imagenes/caso28/joyeriapx.jpg" alt="Joyería">
+    </section>
+
+    <footer>
+        <p>&copy; Todos los derechos reservados, ICT2025</p>
+    </footer>
+
+    <!-- JS menú hamburguesa -->
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUL = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navUL.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* Estilo general */
+@font-face {
+    font-family: 'GodOfWar';
+    src: url('fonts/GODOFWAR.TTF') format('truetype');
+}
+
+body {
+  font-family: GodOfWar, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  background-image: url('https://tse1.explicit.bing.net/th/id/OIP.UCCnRL5u93BRdZCW-ShgAAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  backdrop-filter: brightness(0.6);
+}
+
+/* Encabezado */
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: black;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  letter-spacing: 2px;
+  color: #e00000cc;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* Menú */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* Para que baje en pantallas pequeñas */
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #5e1055;
+}
+
+/* Secciones */
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+}
+
+/* Botones */
+button, .button {
+  padding: 12px 20px;
+  background-color: #5e1055;
+  color: white;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+button:hover, .button:hover {
+  background-color: #295d5f;
+  color: #fff;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+/* Cuadro de pistas o diálogos */
+.clue-box, .dialog-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #e0e000;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+}
+
+/* ----------- RESPONSIVIDAD ----------- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  section {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  button, .button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Menú en escritorio */
+#nav-menu {
+  display: block;
+}
+
+/* En móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar hamburguesa */
+  }
+
+  #nav-menu {
+    display: none; /* Oculto por defecto */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-menu ul li {
+    width: 100%;
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-bottom: 1px solid #333;
+  }
+}
+
+/* Forzar menú horizontal cuando vuelva a pantalla grande */
+@media (min-width: 769px) {
+  #nav-menu {
+    display: block !important;
+  }
+
+  #nav-menu ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #nav-menu ul li a {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos</title>
+    <link rel="stylesheet" href="../css/casos.css">
+    <link rel="icon" href="../imagenes/logo.png" type="image/png">
+</head>
+<body>
+<header>
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="../index.html"">Inicio</a></li>
+      <li><a href="../html/casos.html">Casos</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+      <li><a href="../html/quienes-somos.html">Quienes somos</a></li>
+      <li><a href="../html/galeria.html">Galería</a></li>
+      <li><a href="../html/servicio.html">Servicios</a></li>
+    </ul>
+  </nav>
+
+  <h2>Casos</h2>
+</header>
+
+
+<main>
+    <div class="cases-container">
+
+        <section class="case-card">
+            <center>
+            <a href="../html/caso04.html" class="button1">
+            <img src="../imagenes/caso_1.png">
+            <h2>Caso N°04 Fragmentos del silencio</h2>
+            <p>El sujeto vio algo que no debia lo cual lo condeno a ser encontrado sin vida y descuartizado</p>
+            </a>
+            </center>
+        </section>
+
+        <section class="case-card">
+            <center>
+            <a href="caso10.html" class="button2">
+            <img src="../imagenes/caso_2.png">
+            <h2>Caso N°10 Silencio en el ático</h2>
+            <p>El sujeto fue encontrado colgado en el ático de su antigua casa</p>
+            </a>
+            </center>
+        </section>
+
+        <section class="case-card">
+            <center>
+            <a href="caso17.html" class="button3">
+            <img src="../imagenes/caso_3.png">
+            <h2>Caso N°17 La habitación del eco</h2>
+            <p>La puerta fue encontrada cerrada y solo había una libreta con un mensaje extraño</p>
+            </a>
+            </center>
+        </section>
+
+        <section class="case-card">
+            <center>
+            <a href="caso21.html" class="button4">
+            <img src="../imagenes/caso_4.png">
+            <h2>Caso N°21 Merodeador nocturno</h2>
+            <p>Ella sentía que alguien la observaba desde hacía tiempo, salió a verificar que todo estaba en orden lo que la llevó a ser vista por última vez en el patio de su casa</p>
+            </a>
+            </center>
+        </section>
+
+        <section class="case-card">
+            <center>
+            <a href="caso28.html" class="button5">
+            <img src="../imagenes/caso_5.png">
+            <h2>Caso N°28 El brillo perfecto</h2>
+            <p>Dos sujetos armados roban una joyería y de paso el dinero de la caja que había en la joyería</p>
+            </a>
+            </center>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; Todos los derechos reservados, ICT2025</p>
+</footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
